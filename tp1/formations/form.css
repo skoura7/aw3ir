@@ -11,3 +11,7 @@ h1{
     height: 100px;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+img:hover{
+    transform: scale(2);
+}
