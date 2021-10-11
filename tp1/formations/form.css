@@ -1,9 +1,13 @@
 .html1{
     background-image:url(../abstract.png);
     background-repeat:no-repeat;
-
- min-width: 100%;
- min-height: 100%;
+    background-size: 100%;
 
     
+}
+
+h1{
+    position: relative;
+    height: 100px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }

@@ -1,9 +1,10 @@
+
+table{ border-collapse: collapse;}
+
 .html2{
     background-image:url(../abstract.png);
     background-repeat:no-repeat;
-
- min-width: 100%;
- min-height: 100%;
+    background-size: 100%;
 
     
 }
@@ -27,6 +28,12 @@ tr:nth-child(even):hover{
     color: whitesmoke;
 }
 
-img{
+img:hover{
     transform: scale(2);
+}
+
+h1{
+    position: relative;
+    height: 100px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
