@@ -39,8 +39,10 @@ tr:nth-child(even):hover{
     color: whitesmoke;
 }
 
+
 .ing{
     color:rgb(25, 105, 36);
+    font-family:georgia;
 }
 
 
