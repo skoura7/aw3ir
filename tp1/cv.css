@@ -11,17 +11,32 @@ html{
     
 }
 
+a:hover{
+    background-color: teal;
+    color:white;
+}
 
 /**tr, td{
     border: 2px solid rgb(245, 240, 240);
     background-color: rgb(154, 201, 177);}*/
 
 tr:nth-child(odd){
-    background-color: rgb(137, 202, 197);
+    background-color: rgb(161, 226, 221);
+   
+}
+
+tr:nth-child(odd):hover{
+    background-color: rgb(4, 46, 46);
+    color: whitesmoke;
 }
 
 tr:nth-child(even){
-    background-color: rgb(107, 170, 154);
+    background-color: rgb(83, 129, 118);
+}
+
+tr:nth-child(even):hover{
+    background-color: rgb(14, 92, 92);
+    color: whitesmoke;
 }
 
 .ing{
