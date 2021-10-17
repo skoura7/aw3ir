@@ -25,9 +25,35 @@
         <!--<script src="js/main.js"></script>-->
     </head>
     <body>        
-        <h1>tp2</h1>
+        <h1 align="center">Saisie d'une fiche "Personne" </h1>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+    <table>
+    <form id="form" method="post" >
+       <tr>
+        <td><label for="nom">Nom</label></td>
+        <td><input id="nom" type="text" name="nom" min="5" max="20" class="form"/></td>
+        </tr>
+        <tr>
+          <td>  <label for="prenom">Prénom</label></td>
+          <td> <input id="prenom" type="text" name="prenom" min="5" max="20" class="form"/> </td>
+        </tr>
+        <tr>
+            <td>  <label for="dN">Date de naissance</label></td>
+            <td> <input id="dN" type="date" name="DateNaissance" placeholder="JJ/MM/AAAA" class="form" /></td>
+        </tr>
+        <tr>
+            <td><label for="adresse">Adresse Postale</label></td>  
+            <td><input id="adresse" type="text" name="adresse" min="5" max="50" class="form"/></td>  
+        </tr>
+        <tr>
+            <td> <label for="mail">Mail</label></td> 
+            <td> <input id="mail" type="email" name="Amail" min="5" max="30" class="form"/></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input id="button" type="button" value="Valider" onclick="validation()"/></td>
+        </tr>
+    </form>
+    </table>
     </body>
 </html>
