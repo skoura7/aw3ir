@@ -40,8 +40,8 @@
           <td> <input id="prenom" type="text" name="prenom" min="5" max="20" class="form"/> </td>
         </tr>
         <tr>
-            <td>  <label for="dN">Date de naissance</label></td>
-            <td> <input id="dN" type="date" name="DateNaissance" placeholder="JJ/MM/AAAA" class="form" /></td>
+            <td>  <label for="date">Date de naissance</label></td>
+            <td> <input id="date" type="date" name="DateNaissance" placeholder="JJ/MM/AAAA" class="form" /></td>
         </tr>
         <tr>
             <td><label for="adresse">Adresse Postale</label></td>  
@@ -49,11 +49,11 @@
         </tr>
         <tr>
             <td> <label for="mail">Mail</label></td> 
-            <td> <input id="mail" type="email" name="Amail" min="5" max="30" class="form"/></td>
+            <td> <input id="mail" type="email" name="mail" min="5" max="30" class="form"/></td>
         </tr>
         <tr>
             <td> </td>
-            <td> <input type="button" value="Valider"/></td>
+            <td> <input type="button" value="Valider" onclick="validation()"></td>
         </tr>
     </form>
     </table>
