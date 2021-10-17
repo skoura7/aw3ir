@@ -23,6 +23,7 @@
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
+        <link rel="stylesheet" href="formulaire.css"/>
     </head>
     <body>        
         <h1 align="center">Saisie d'une fiche "Personne" </h1>
@@ -51,9 +52,12 @@
         </tr>
         <tr>
             <td> </td>
-            <td><input id="button" type="button" value="Valider" onclick="validation()"/></td>
+            <td> <input type="button" value="Valider"/></td>
         </tr>
     </form>
     </table>
+
+    <div id="error"> </div>
+    <div id="resultat"> </div>
     </body>
 </html>
