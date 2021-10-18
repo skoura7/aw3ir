@@ -1,5 +1,7 @@
 function validation ()
 {
+    document.getElementById("resultat").hidden;
+document.getElementById("error").hidden;
 
     if (document.getElementById("nom").value.length < 5 ) { 
         document.getElementById("error").innerHTML = "Le nom doit contenir au moins 5 caractère !";

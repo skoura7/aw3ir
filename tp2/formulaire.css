@@ -3,6 +3,8 @@
     padding: 5px;
     border: 1px;
     border-color: black;
+    
+ 	text-decoration: white;
 }
 
 .resultat{
@@ -10,4 +12,6 @@
     padding: 5px;
     border: 1px;
     border-color: black;
+    
+ 	text-decoration: white;
 }
