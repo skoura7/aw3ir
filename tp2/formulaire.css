@@ -4,7 +4,7 @@
     border: 1px;
     border-color: black;
     
- 	text-decoration: white;
+ 	text-decoration:  white;
    
 }
 
@@ -15,4 +15,22 @@
     border-color: black;
   
  	text-decoration: white;
+}
+
+html{
+    background-color: azure;
+}
+
+
+
+form{
+    border: none;
+}
+
+table{
+    border: none;
+}
+
+td {
+    border: none;
 }
