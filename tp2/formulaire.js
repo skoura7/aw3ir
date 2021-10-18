@@ -24,7 +24,7 @@ document.getElementById("error").setAttribute("hidden",'hidden');
         document.getElementById("error").removeAttribute("hidden");
     }    
      else {
-        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
+        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value + document.querySelector("#prenom").value;
         document.getElementById("resultat").removeAttribute("hidden");
 
      }
