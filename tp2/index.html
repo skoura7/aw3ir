@@ -10,15 +10,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <style>
-          body{
-                        
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 20px;
-              margin: 0 auto;
-              max-width: 400px;              
-          }
-        </style>
+       
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
@@ -27,8 +19,10 @@
         <script type="text/javascript" src="formulaire.js"></script>
     </head>
     <body>        
-        <h1 align="center">Saisie d'une fiche "Personne" </h1>
+        
         <!-- Add your site or application content here -->
+      <div class="container">
+        <h1 align="center">Saisie d'une fiche "Personne" </h1>  
     <table align="center">
     <form id="formulaire" method="post" align="center" >
        <tr>
@@ -59,10 +53,11 @@
         </tr>
         <tr>
             <td> </td>
-            <td> <input type="button" value="Valider" onclick="validation()"></td>
+            <td> <input id="Valider" type="button" value="Valider" onclick="validation()"></td>
         </tr>
     </form>
     </table>
+      </div>
 
     <div id="error" class="error" hidden>  </div>
     <div id="resultat" class="resultat" hidden> </div>
