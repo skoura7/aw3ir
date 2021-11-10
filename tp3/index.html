@@ -3,31 +3,65 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP3</title>
+        <title>TP2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
+       
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
+        <!--<script src="js/main.js"></script>-->
+        <link rel="stylesheet" href="formulaire.css"/>
+        <script type="text/javascript" src="formulaire.js"></script>
     </head>
     <body>        
-        <h1>tp3</h1>
+        
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+      <div class="container">
+        <h1 align="center">Saisie d'une fiche "Personne" </h1>  
+    <table align="center">
+    <form id="formulaire" method="post" align="center" >
+       <tr>
+       <td> <label for="civilite">Civilite</label> </td>
+       <td> <p><input type="radio" name="civilite" value="m" >Homme
+        <input type="radio" name="civilite" value="f">Femme</p></td> 
+       </tr>
+
+       <tr>
+        <td><label for="nom">Nom</label></td>
+        <td><input id="nom" type="text" name="nom" min="5" max="20" /></td>
+        </tr>
+        <tr>
+          <td>  <label for="prenom">Prénom</label></td>
+          <td> <input id="prenom" type="text" name="prenom" min="5" max="20" /> </td>
+        </tr>
+        <tr>
+            <td>  <label for="date">Date de naissance</label></td>
+            <td> <input id="date" type="date" name="DateNaissance" placeholder="JJ/MM/AAAA" /></td>
+        </tr>
+        <tr>
+            <td><label for="adresse">Adresse Postale</label></td>  
+            <td><input id="adresse" type="text" name="adresse" min="5" max="50" /></td>  
+        </tr>
+        <tr>
+            <td> <label for="mail">Mail</label></td> 
+            <td> <input id="mail" type="email" name="mail" min="5" max="30"/></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> <input id="Valider" type="button" value="Valider" onclick="validation()"></td>
+        </tr>
+    </form>
+    </table>
+     
+
+    <div id="error" class="error" hidden>  </div>
+    <div id="resultat" class="resultat" hidden> </div>
+
+</div>
     </body>
 </html>
