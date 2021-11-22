@@ -36,11 +36,11 @@
         <h1 align="center" >TP AW</h1>
         <!-- Add your site or application content here -->
        <div class="container">
-        <form align="center" >
+        <form class="myForm" align="center" id="myForm" >
             <div class="row mb-3">
-                <label for="inputNom3" class="col-sm-2 col-form-label">Nom</label>
+                <label for="name" class="col-sm-2 col-form-label">Nom</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputNom3">
+                  <input type="text" class="name" id="name">
                 </div>
               </div>
               <div  class="row mb-3">
@@ -68,11 +68,27 @@
                 </div>
               </div>
               <div class="col-12">
-                <button align="left" type="submit" class="btn btn-primary">Sign in</button>
+                <button align="left" type="submit" class="submit">Sign in</button>
               </div>
              
 
           </form>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">...</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+           
+        </div>
+      </div>
+    </div>
+  </div>
     </body>
 </html>
