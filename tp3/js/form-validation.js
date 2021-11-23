@@ -10,7 +10,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         console.log("form submitted!");
 
 
-        if (document.getElementById("name").value.length < 5) {
+        if ((document.getElementById("name").value.length < 5) || (getElementById("name").value.length == " ")){
             console.log("nom error");
             document.querySelector(".modal-title").textContent = "Erreur"
 
@@ -20,7 +20,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         }
     
     
-        else if (document.getElementById("Prenom").value.length < 5) {
+        else if ((document.getElementById("Prenom").value.length < 5) || (getElementById("Prenom").value.length == " ")) {
             console.log("prenom error");
             
             document.querySelector(".modal-title").textContent = "Erreur"
@@ -31,7 +31,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
 
 
         }
-        else if (document.getElementById("Adresse").value.length < 5) {
+        else if ((document.getElementById("Adresse").value.length < 5) || (getElementById("Adresse").value.length == " ")) {
             console.log("adresse error");
             
             document.querySelector(".modal-title").textContent = "Erreur"
