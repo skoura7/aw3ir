@@ -51,7 +51,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
 
         else { 
             console.log('OK');
-        document.querySelector(".modal-title").textContent = " Bienvenue " + document.getElementById("Prenom").value + document.getElementById("  name").value;
+        document.querySelector(".modal-title").textContent = " Bienvenue " + document.getElementById("Prenom").value + document.getElementById("name").value;
         document.querySelector(".modal-body").innerHTML = " vous êtes nés le :" + document.getElementById("Date").value + " et vous habitez à ";
         document.querySelector(".modal-bodyi").innerHTML = '<a href="http://maps.google.com/maps?q=Paris"><img src="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/> </a>';
           
