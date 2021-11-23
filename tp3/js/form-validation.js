@@ -67,7 +67,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
       };
 
       function validateDate() {
-        const inputDateDeNaissance = document.getElementById('inputDate3').value;
+        const inputDateDeNaissance = document.getElementById('Date').value;
     
         let dateNaissance = new Date(inputDateDeNaissance);
         let dateNaissanceTimestamp = dateNaissance.getTime();
