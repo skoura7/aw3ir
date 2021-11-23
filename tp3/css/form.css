@@ -125,9 +125,7 @@ button:focus {
 
 
 .window {
-  z-index: 100;
   color: #fff;
-  font-family: roboto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -141,19 +139,16 @@ button:focus {
   height: 560px;
   width: 360px;
   background: #fff;
-  background: url("img.jpg") top left no-repeat;
 }
 
 .overlay {
-    background: url("img.jpg") top left no-repeat;
   background: -webkit-linear-gradient(#8CA6DB, #B993D6);
   background: linear-gradient(#8CA6DB, #B993D6);
   opacity: 0.85;
   filter: alpha(opacity=85);
   height: 560px;
-  position: absolute;
+  position: relative;
   width: 360px;
-  z-index: 1;
 }
 
 .bold-line {
