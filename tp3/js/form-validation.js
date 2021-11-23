@@ -5,7 +5,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
      // Y mettre le code Javascript pour valider tous les champs du formulaire
      var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 
-    document.querySelector("myForm").addEventListener("submit", function (event) {
+    document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
         console.log("form submitted!");
 
