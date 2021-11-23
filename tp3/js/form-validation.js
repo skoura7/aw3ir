@@ -20,7 +20,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         }
     
     
-        else if (document.getElementById("inputPrenom3").value.length < 5) {
+        else if (document.getElementById("Prenom").value.length < 5) {
             console.log("prenom error");
             
             document.querySelector(".modal-title").textContent = "Erreur"
@@ -31,5 +31,25 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
 
 
         }
-      });
-    };
+        else if (document.getElementById("Adresse").value.length < 5) {
+            console.log("adresse error");
+            
+            document.querySelector(".modal-title").textContent = "Erreur"
+
+            document.querySelector(".modal-body").innerHTML = "Le champs Prénom doit contenir au moins 5 caractère !";  
+            myModal.show();
+
+
+
+        }
+        else { 
+            console.log('OK');
+        document.querySelector(".modal-title").textContent = " Bienvenue " + document.getElementById("Prenom").value + document.getElementById("name").value;
+        myModal.show();}
+      })
+    }
+    
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      };
