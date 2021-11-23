@@ -125,34 +125,17 @@ button:focus {
 
 
 .window {
-  color: #fff;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  box-sizing: border-box;
   height: 560px;
   width: 360px;
   
-  background: -webkit-linear-gradient(#8CA6DB, #B993D6);
-  background: linear-gradient(#8CA6DB, #B993D6);
-  
-  filter: alpha(opacity=85);
-}
-
-.overlay {
   background: -webkit-linear-gradient(#8CA6DB, #B993D6);
   background: linear-gradient(#8CA6DB, #B993D6);
   opacity: 0.85;
   filter: alpha(opacity=85);
-  height: 560px;
-  position: absolute;
-  width: 360px;
 }
+
+
 
 .bold-line {
   background: #e7e7e7;
