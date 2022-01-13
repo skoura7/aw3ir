@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TP3</title>
+  <title>TP4</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,12 +23,17 @@
 
   <!-- CSS boostrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/form.css">
+  <!--link rel="stylesheet" href="css/form.css"-->
+
 
   <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
   <script src="js/bootstrap.bundle.js"></script>
 
-
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/gps.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/form-validation.js"></script>
   <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
   <!--<link rel="stylesheet" href="style.css">-->
@@ -46,7 +51,12 @@
         <input type="date" class="form-control full-width" id="Date" placeholder='DATE DE NAISSANCE'>
 
         <input type="text" class="form-control full-width" id="Adresse" placeholder='ADRESSE'>
-
+            
+          <button class="btn btn-warning" type="button" id="gps" onclick="getLocation()">📍 GPS</button>
+          <div id="map">
+            <img alt="map" width="300" src="https://maps.googleapis.com/maps/api/staticmap?markers=latitude,longitude&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg">
+        </div>  
+                       
         <input type="email" class="form-control full-width" id="email" placeholder='EMAIL'>
         <div class="col-12">
           <button align="left" type="submit" class="submit full-width">VALIDER</button>

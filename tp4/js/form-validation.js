@@ -76,4 +76,6 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
     
         return (dateNaissanceTimestamp < nowTimestamp)
     };
+
+    
     
