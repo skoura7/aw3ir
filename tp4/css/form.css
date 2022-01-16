@@ -1,5 +1,12 @@
 
-body,
+body{  
+  background: -webkit-linear-gradient(#8CA6DB, #B993D6);
+  background: linear-gradient(#8CA6DB, #B993D6);          
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 800px; 
+}
 html {
   margin: 0;
   height: 100%;
@@ -94,8 +101,8 @@ button:focus {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
- 
-  background: url("img2.jpg") top left no-repeat;
+  background: -webkit-linear-gradient(#8CA6DB, #B993D6);
+  background: linear-gradient(#8CA6DB, #B993D6);
   height: 100%;
 }
 
@@ -110,13 +117,13 @@ button:focus {
   font-size: 30px;
   letter-spacing: 0px;
   font-style: oblique;
-  color: black;
+  color: #e9ebee;
   font-weight: bolder;
 }
 
 
 
-.window {
+/*.window {
   position: relative;
   height: 560px;
   width: 360px;
@@ -125,11 +132,11 @@ button:focus {
   background: linear-gradient(#8CA6DB, #B993D6);
   opacity: 0.85;
   filter: alpha(opacity=85);
-}
+}*/
 
 
 
-.bold-line {
+/*.bold-line {
   background: #e7e7e7;
   position: absolute;
   top: 0px;
@@ -141,7 +148,7 @@ button:focus {
   opacity:0.1;
     background: url('https://pexels.imgix.net/photos/27718/pexels-photo-27718.jpg?fit=crop&w=1280&h=823') left no-repeat;
   background-size:cover;
-}
+}*/
 
 @media (max-width: 600px) {
   .window {
@@ -149,4 +156,16 @@ button:focus {
     height: 100%;
   }
  
+}
+
+th{
+  color: #e9ebee;
+}
+
+h4{
+  color: #e9ebee;
+}
+
+td{
+  color: #e9ebee;
 }

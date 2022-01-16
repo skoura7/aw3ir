@@ -13,13 +13,13 @@ var contactStore = (function () {
     // the implementation of the module within the function() block
   
     return {
-      add: function (_name, _firsname, _date, _adress, _mail) {
+      add: function (_nom, _Prenom, _date, _Adresse, _email) {
         var contact = {
-          name: _name,
-          firstname: _firsname,
+          nom: _nom,
+          Prenom: _Prenom,
           date: _date,
-          adress: _adress,
-          mail: _mail,
+          Adresse: _Adresse,
+          email: _email,
         };
         // ajout du contact à la liste
         contactList.push(contact);

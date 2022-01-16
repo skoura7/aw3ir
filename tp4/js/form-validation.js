@@ -10,7 +10,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         console.log("form submitted!");
 
 
-        if (document.getElementById("name").value.length < 5) {
+        if (document.getElementById("nom").value.length < 5) {
             console.log("nom error");
             document.querySelector(".modal-title").textContent = "Erreur"
 
@@ -36,13 +36,13 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
             
             document.querySelector(".modal-title").textContent = "Erreur"
 
-            document.querySelector(".modal-body").innerHTML = "Le champs Prénom doit contenir au moins 5 caractère !";  
+            document.querySelector(".modal-body").innerHTML = "Le champs Adresse doit contenir au moins 5 caractère !";  
             myModal.show();
 
 
 
         }
-        else if (validateDate(document.getElementById("Date").value) == false) {
+        else if (validateDate(document.getElementById("date").value) == false) {
             console.log("Date error");
             document.querySelector(".modal-title").textContent = "Erreur";
             document.querySelector(".modal-body").textContent = "VOUS VENEZ DU FUTURE !!! Veuillez saisir une date de naissance valide";
@@ -51,11 +51,12 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
 
         else { 
             console.log('OK');
-        document.querySelector(".modal-title").textContent = " Bienvenue " + document.getElementById("Prenom").value + " "+document.getElementById("name").value;
-        document.querySelector(".modal-body").innerHTML = " vous êtes nés le :" + document.getElementById("Date").value + " et vous habitez à ";
-        document.querySelector(".modal-bodyi").innerHTML = '<a href="http://maps.google.com/maps?q=Paris"><img src="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/> </a>';
-          
-
+        document.querySelector(".modal-title").textContent = " Bienvenue " + document.getElementById("Prenom").value + " "+document.getElementById("nom").value;
+        document.querySelector(".modal-body").innerHTML = " Vous  êtes maintenant sur  la liste de nos contacts";
+       contactStore.add(document.getElementById("nom").value, document.getElementById("Prenom").value, document.getElementById("date").value, document.getElementById("Adresse").value, document.getElementById("email").value);
+        localStorage.setItem('contactList', JSON.stringify(contactStore.getList()));
+  
+        AfficheList();
           myModal.show();
         }
       });
@@ -67,7 +68,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
       };
 
       function validateDate() {
-        const inputDateDeNaissance = document.getElementById('Date').value;
+        const inputDateDeNaissance = document.getElementById('date').value;
     
         let dateNaissance = new Date(inputDateDeNaissance);
         let dateNaissanceTimestamp = dateNaissance.getTime();
@@ -78,6 +79,23 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
     };
 
     function calcNbChar(id) {
-        document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length;
+        document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length + " car.";
       };
+      
+    function AfficheList() {
+      
+        var contactList = JSON.parse(localStorage.getItem("contactList"));
+        for (var index in contactList) {
+      
+          document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
+      
+            '<tr>' +
+            '<td>' + contactList[index].nom + '</td>' +
+            '<td>' + contactList[index].Prenom + '</td>' +
+            '<td>' + contactList[index].date + '</td>' +
+            '<td>' + contactList[index].Adresse + '</td>' +
+            '<td><a href=mailto:>' + contactList[index].email + '</a></td>' +
+            '</tr>'
+        };
     
+    }
