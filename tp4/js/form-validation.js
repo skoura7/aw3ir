@@ -77,5 +77,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
         return (dateNaissanceTimestamp < nowTimestamp)
     };
 
-    
+    function calcNbChar(id) {
+        document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length;
+      };
     
