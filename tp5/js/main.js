@@ -43,9 +43,9 @@ window.onload = function () {
             addCity: function (event) {
                 event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
 
-                // if(this.isCityExist(this.formCityName)){
-                //    this.messageForm = 'existe déjà';
-                //}else{
+                if(this.isCityExist(this.formCityName)){
+                   this.messageForm = 'existe déjà';
+                 }else{
                     this.cityList.push({name : this.formCityName});
     
                     // remise à zero du message affiché sous le formulaire
@@ -53,7 +53,7 @@ window.onload = function () {
     
                     // remise à zero du champ de saisie
                     this.formCityName = '';
-                //}
+                }
             },
             isCityExist: function (_cityName){
 
@@ -70,9 +70,34 @@ window.onload = function () {
             remove: function (_city) {      
                 // A compléter dans la suite du TP          
             }, 
-            meteo: function (_city) {  
-                // A compléter dans la suite du TP              
-            }
+            // à ajouter à la suite des autres méthodes VUE
+meteo : function (_city){
+
+    this.cityWeatherLoading = true;
+
+    // appel AJAX avec fetch
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&apikey=d90f8a53b269f81826ea962301d27b5d')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            app.cityWeatherLoading = false;
+
+            // test du code retour
+            // 200 = OK
+            // 404 = city not found 
+            if(json.cod === 200){
+                // on met la réponse du webservice dans la variable cityWeather
+                app.cityWeather = json;
+                app.message = null;
+            }else{
+                app.cityWeather = null;
+                app.message = 'Météo introuvable pour ' + _city.name 
+                                + ' (' + json.message+ ')';
+            }        
+        });        
+    }
+
         }
     });
 }
