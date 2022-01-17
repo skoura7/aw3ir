@@ -43,9 +43,30 @@ window.onload = function () {
             addCity: function (event) {
                 event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
 
-                console.log('formCityName:',this.formCityName);
-                // A compléter dans la suite du TP  
+                // if(this.isCityExist(this.formCityName)){
+                //    this.messageForm = 'existe déjà';
+                //}else{
+                    this.cityList.push({name : this.formCityName});
+    
+                    // remise à zero du message affiché sous le formulaire
+                    this.messageForm = '';
+    
+                    // remise à zero du champ de saisie
+                    this.formCityName = '';
+                //}
             },
+            isCityExist: function (_cityName){
+
+                // la méthode 'filter' retourne une liste contenant tous les items ayant un nom égale à _cityName
+                // doc. sur filter : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter
+                if( this.cityList.filter(item => 
+                                            item.name.toUpperCase() == _cityName.toUpperCase()
+                                        ).length>0){
+                    return true;
+                }else{
+                    return false;
+                }},
+
             remove: function (_city) {      
                 // A compléter dans la suite du TP          
             }, 
