@@ -21,8 +21,16 @@
               max-width: 800px;              
           }
 
-          div{
-              position: center;
+          .d1{
+              position: absolute;
+  margin: auto;
+  top: 50px;
+  right: 50px;
+  bottom: 50px;
+  left: 50px;
+  width: absolute;
+  height: absolute;
+  border-radius: 3px;
           }
           h1{
               color: #e9ebee;
@@ -41,7 +49,8 @@
         <script src="js/libs/vue.js"></script>
     </head>
     <body>        
-        <h1>TP5: Weather App</h1>
+      <div id="d1" class="d1" >
+            <h1>TP5: Weather App</h1>
         <!-- Add your site or application content here -->
         <div id="weatherApp">
             <!-- ici votre code HTML utilisé par VUE -->
@@ -122,5 +131,6 @@
 </div>
 </div>
 <!-- fin : Listing des villes -->
+</div>
     </body>
 </html>
