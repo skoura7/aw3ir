@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import {MeteoService} from '../services/meteo.service'
+import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-meteo-detail',
@@ -7,9 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeteoDetailComponent implements OnInit {
 
-  constructor() { }
+  meteo : any;
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute,
+    private meteoService: MeteoService,
+    private location: Location
+  ) {}
+
+  ngOnInit() {
+    this.getMeteo();
   }
 
+  getMeteo(): void {
+    const name = this.route.snapshot.paramMap.get('name');
+    console.log('getmeteo',name);
+    if(name!=null){
+    this.meteoService.getMeteo(name)
+      .then(meteo => this.meteo = meteo)
+      .catch(fail => this.meteo = fail);
+  }
+  }
 }
